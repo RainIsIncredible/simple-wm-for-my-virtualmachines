@@ -1,2 +1,2 @@
-# simple-wm-for-my-virtualmachines
-simple as that
+# Window Manager for my virtual machines
+Very simple qtile rice for when i want to use a virtual machine

@@ -42,7 +42,8 @@ terminal = guess_terminal()
 #cores
 cinza = '#242424'
 laranja = '#e0ba60'
-
+roxo = '#7c7098'
+amarelo = '#e3c495'
 
 keys = [
     # Switch between windows
@@ -80,7 +81,7 @@ keys = [
     # multiple stack panes
     Key([mod, "shift"], "Return", lazy.layout.toggle_split(),
         desc="Toggle between split and unsplit sides of stack"),
-    Key([mod], "Return", lazy.spawn('termite'), desc="Launch terminal"),
+    Key([mod], "Return", lazy.spawn('alacritty'), desc="Launch terminal"),
 
     # Toggle between different layouts as defined below
     Key([mod], "Tab", lazy.next_layout(), desc="Toggle between layouts"),
@@ -110,7 +111,7 @@ for i in groups:
     ])
 
 layouts = [
-    layout.Columns(border_focus=laranja),
+    layout.Columns(border_focus=amarelo),
     # Try more layouts by unleashing below layouts.
     # layout.Stack(num_stacks=2),
     # layout.Bsp(),
@@ -140,7 +141,8 @@ screens = [
             [   
                 widget.GroupBox(background=cinza),
                 widget.Prompt(),
-                widget.WindowName(background=laranja),
+                widget.WindowName(background=roxo),
+
                 widget.Chord(
                     chords_colors={
                         'launch': ("#ff0000", "#fffffff"),
@@ -200,7 +202,7 @@ auto_minimize = True
 #
 # We choose LG3D to maximize irony: it is a 3D non-reparenting WM written in
 # java that happens to be on java's whitelist.
-wmname = "LG3D"
+wmname = "le epic gay furry porn setup"
 @hook.subscribe.startup_once
 def autostart():
     home = os.path.expanduser('~')
